@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 沙雕</title>
+  <title>沙雕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实，我只是一个沙雕！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;hello-world&#x2F;index.html">
+  <meta name="description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沙雕">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;demo&#x2F;gift&#x2F;index.html">
 <meta property="og:site_name" content="沙雕">
-<meta property="og:description" content="其实，我只是一个沙雕！">
+<meta property="og:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T08:04:16.994Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;demo&#x2F;gift&#x2F;img&#x2F;shake.png">
+<meta property="og:updated_time" content="2017-07-28T18:51:08.000Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;demo&#x2F;gift&#x2F;img&#x2F;shake.png">
   
     <link rel="alternative" href="/atom.xml" title="沙雕" type="application/atom+xml">
   
@@ -152,27 +154,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-27T04:18:18.327Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="其实，我只是一个沙雕！"><a href="#其实，我只是一个沙雕！" class="headerlink" title="其实，我只是一个沙雕！"></a>其实，我只是一个沙雕！</h2>
+        <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+	<title>礼物 - 3.8</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+	<script src="js/shake.js"></script>
+</head>
+<body>
+	<!-- <div id="my_player"></div> -->
+	<header>
+		<p>3.8节礼物，来了…</p>
+		<div class="paper-t"></div>
+		<div class="main">
+			<div class="main-top top2">
+				<section id="se1">
+					<p>首先，你要输入我的生日</p>
+					<input id="myBir" type="text" placeholder="4位数，格式为:mmdd"/>
+					<p>接着，摇一摇…</p>
+					<img src="img/shake.png"/>
+					<p>最后，这就是见证奇迹的时刻…</p>
+				</section>
+				<section id="se2" class="hide">
+					<p>3.8节快乐！</p>
+					<p>祝身体健康,平安长乐</p>
+					<p>请打开音量收听…</p>
+				</section>
+			</div>
+		</div>
+		<div class="paper-b"></div>
+	</header>
+</body>
+	<script>
+		var Main = (function() {
+			function playAudio(src) {
+			    if (typeof Audio != "undefined") { 
+			        new Audio(src).play() ;
+			    } else if (typeof device != "undefined") {
+			        if (device.platform == 'Android') {
+			            console.log(src);
+			        }
+			        var mediaRes = new Media(src,
+			            function onSuccess() {
+			                mediaRes.release();
+			            },
+			            function onError(e){
+			                console.log("error playing sound: " + JSON.stringify(e));
+			            });
+			        mediaRes.play();
+
+			    } else {
+			        alert("no sound API to play: " + src);
+			    }
+			}
+			window.addEventListener('shake', autoRun, false);
+			function autoRun(){
+				if($("#myBir").val() == "0425"){
+					$("#se1").hide();
+					$("#se2").show();
+					playAudio("media/gift.ogg");
+				}else{
+					alert("生日错误");
+				}
+				
+			}
+			var init = function() {
+				
+			}
+			return {
+				init: init
+			}
+		})();
+
+		$(Main.init());
+	</script>
+</html>
       
 
       
@@ -251,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assets/demo/gift/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -313,7 +381,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

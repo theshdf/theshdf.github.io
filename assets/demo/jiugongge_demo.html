@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 沙雕</title>
+  <title>沙雕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实，我只是一个沙雕！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;hello-world&#x2F;index.html">
+  <meta name="description" content="jiugongge_demo 	 		*{ 			margin:0; 			padding: 0; 		} 		table{ 			margin: 30px; 			border-collapse: collapse; 		} 		#test0{ 			margin: 30px; 			width: 200px; 			height: 200px; 		} 		#test0 div{">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沙雕">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;demo&#x2F;jiugongge_demo.html">
 <meta property="og:site_name" content="沙雕">
-<meta property="og:description" content="其实，我只是一个沙雕！">
+<meta property="og:description" content="jiugongge_demo 	 		*{ 			margin:0; 			padding: 0; 		} 		table{ 			margin: 30px; 			border-collapse: collapse; 		} 		#test0{ 			margin: 30px; 			width: 200px; 			height: 200px; 		} 		#test0 div{">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T08:04:16.994Z">
+<meta property="og:updated_time" content="2017-07-28T18:51:08.000Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="沙雕" type="application/atom+xml">
@@ -152,27 +152,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-27T04:18:18.327Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="其实，我只是一个沙雕！"><a href="#其实，我只是一个沙雕！" class="headerlink" title="其实，我只是一个沙雕！"></a>其实，我只是一个沙雕！</h2>
+        
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jiugongge_demo</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		table{
+			margin: 30px;
+			border-collapse: collapse;
+		}
+		#test0{
+			margin: 30px;
+			width: 200px;
+			height: 200px;
+		}
+		#test0 div{
+			width: 50px;
+			height: 50px;
+			float: left;
+			background: #eee;
+			border: 5px solid #00f;
+			text-align: center;
+			line-height: 50px;
+			color: #090;
+			position: relative;
+		}
+		#test0 .lr_indent{
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		#test0 .tb_indent{
+			margin-top: -5px;
+			margin-bottom: -5px;
+		}
+		#test0 div:hover{
+			border: 5px solid #f00;
+			z-index: 999;
+			background: #eee;
+		}
+		#test1 td{
+			width: 50px;
+			height: 50px;
+			background: #eee;
+			position: relative;
+			border: 5px solid #00f;
+			text-align: center;
+		}
+		#test1 td span{
+			color: #090;
+			display:block;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 50px;
+		}
+		#test1 td span:hover{
+			border: 5px solid #f00;
+			margin-top:-5px;
+			margin-left: -5px;
+		}
+
+		#test2 td{
+			width: 50px;
+			height: 50px;
+			background: #eee;
+			border: 5px solid #00f;
+			text-align: center;
+			vertical-align: top;
+		}
+		#test2 td div{
+			position:relative;
+			width: 50px;
+			height: 50px;
+		}
+		#test2 td div span{
+			color: #090;
+			display:block;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 50px;
+		}
+		#test2 td div span:hover{
+			border: 5px solid #f00;
+			margin-left: -5px;
+			margin-top: -5px;
+		}
+	</style>
+</head>
+<body>
+	<h2>1) div+负margin实现</h2>
+	<div id="test0">
+		<div>1</div>
+		<div class="lr_indent">2</div>
+		<div>3</div>
+		<div class="tb_indent">4</div>
+		<div class="lr_indent tb_indent">5</div>
+		<div class="tb_indent">6</div>
+		<div>7</div>
+		<div class="lr_indent">8</div>
+		<div>9</div>
+	</div>
+	<h2>2.1) table border-collapse: collapse实现</h2>
+	<div id="test1">
+		<table>
+			<tr>
+				<td><span>1</span></td>
+				<td><span>2</span></td>
+				<td><span>3</span></td>
+			</tr>
+			<tr>
+				<td><span>4</span></td>
+				<td><span>5</span></td>
+				<td><span>6</span></td>
+			</tr>
+			<tr>
+				<td><span>7</span></td>
+				<td><span>8</span></td>
+				<td><span>9</span></td>
+			</tr>
+		</table>
+	</div>
+	<h2>2.2) table思路改进</h2>
+	<div id="test2">
+		<table>
+			<tr>
+				<td><div><span>1</span></div></td>
+				<td><div><span>2</span></div></td>
+				<td><div><span>3</span></div></td>
+			</tr>
+			<tr>
+				<td><div><span>4</span></div></td>
+				<td><div><span>5</span></div></td>
+				<td><div><span>6</span></div></td>
+			</tr>
+			<tr>
+				<td><div><span>7</span></div></td>
+				<td><div><span>8</span></div></td>
+				<td><div><span>9</span></div></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
       
 
       
@@ -251,7 +388,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assets/demo/jiugongge_demo.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -313,7 +450,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
